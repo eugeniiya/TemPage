@@ -6,9 +6,9 @@
  HeaderText="Страница"
  ControlTemplate="{StaticResource GrayTemplate}">
     <StackLayout Margin="10">
-        <Entry Placeholder="Enter username" />
-        <Entry Placeholder="Enter password"
+        <Entry Placeholder="Введите логин" />
+        <Entry Placeholder="Введите пароль"
  IsPassword="True" />
-        <Button Text="Login" />
+        <Button Text="Вход" />
     </StackLayout>
 </controls:HeaderFooterPage>
