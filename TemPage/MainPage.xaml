@@ -1,0 +1,14 @@
+﻿<controls:HeaderFooterPage xmlns="http://xamarin.com/schemas/2014/forms"
+ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+ xmlns:controls="clr-namespace:TemPage"
+ x:Class="TemPage.MainPage"
+ Title="Access template"
+ HeaderText="Страница"
+ ControlTemplate="{StaticResource GrayTemplate}">
+    <StackLayout Margin="10">
+        <Entry Placeholder="Enter username" />
+        <Entry Placeholder="Enter password"
+ IsPassword="True" />
+        <Button Text="Login" />
+    </StackLayout>
+</controls:HeaderFooterPage>

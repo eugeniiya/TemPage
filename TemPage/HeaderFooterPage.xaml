@@ -1,0 +1,91 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+ xmlns:controls="clr-namespace: TemPage"
+ x:Class="TemPage.HeaderFooterPage">
+    <ContentPage.Resources>
+        <Style TargetType="Entry">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="FontSize"
+ Value="18" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Focused">
+                            <VisualState.Setters>
+                                <Setter Property="FontSize"
+ Value="36" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+        <ControlTemplate x:Key="GrayTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="0.8*" />
+                    <RowDefinition Height="0.1*" />
+                </Grid.RowDefinitions>
+                <BoxView Color="Gray" />
+                <Label Margin="20,0,0,0"
+ Text="{TemplateBinding HeaderText}"
+ TextColor="White"
+ FontSize="20"
+ HorizontalOptions="Center"
+ VerticalOptions="Center" />
+                <ContentPresenter Grid.Row="1" />
+                <BoxView Grid.Row="2"
+ Color="Gray" />
+                <Label x:Name="СhangeThemeLabel"
+ Grid.Row="2"
+ Margin="20,0,0,0"
+ Text="Change Theme"
+ TextColor="White"
+ FontSize="20"
+ HorizontalOptions="Center"
+ VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+ Tapped="OnChangeTheme" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+        </ControlTemplate>
+        <ControlTemplate x:Key="BlueTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="0.8*" />
+                    <RowDefinition Height="0.1*" />
+                </Grid.RowDefinitions>
+                <BoxView Color="Blue" />
+                <Label Margin="20,0,0,0"
+ Text="{TemplateBinding HeaderText}"
+ TextColor="White"
+ FontSize="20"
+ HorizontalOptions="Center"
+ VerticalOptions="Center" />
+                <ContentPresenter Grid.Row="1" />
+                <BoxView Grid.Row="2"
+ Color="Blue" />
+                <Label x:Name="СhangeThemeLabel"
+ Grid.Row="2"
+ Margin="20,0,0,0"
+ Text="Change Theme"
+ FontSize="20" FontAttributes="Bold"
+ TextColor="White"
+ HorizontalOptions="Center"
+ VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+ Tapped="OnChangeTheme" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+        </ControlTemplate>
+    </ContentPage.Resources>
+</ContentPage>
